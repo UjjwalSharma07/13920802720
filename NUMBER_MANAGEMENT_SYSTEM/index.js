@@ -20,7 +20,7 @@ app.get('/numbers/odd', (req, res) => {
   res.json({ numbers: odd });
 });
 app.get('/numbers', async (req, res) => {
-  const urls = req.query.url;
+  const urls = req.query;
 
   if (!urls) {
     return res.status(400).json({ error: 'URL_Params "url" is required.' });
